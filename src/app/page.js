@@ -1,11 +1,13 @@
 // import "./home.modules.scss";
-import NavBar from "@/components/NavBar";
-import "./style.scss";
+import NewNavbar from "@/components/NewNavbar";
+// import "./style.scss";
 
 export default function HomePage() {
   return (
-    <>
-      <NavBar />
-    </>
+    <div>
+      <NewNavbar/>
+      <h1> Home Page</h1>
+      <p> This is a week 10 project week.</p>
+    </div>
   );
 }

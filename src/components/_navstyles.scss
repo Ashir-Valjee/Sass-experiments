@@ -1,0 +1,33 @@
+// @use "_index"
+@import "./colours";
+@import "./mixin";
+ 
+
+
+body {
+    background-color: $backGround;
+    font-family: $font;
+    font-size: $fontSize;
+    color: $textColor;
+    
+
+}
+
+.menu-button{
+    position: fixed;
+    margin: 1rem;
+    
+}
+.main-nav {
+    @include flexCenter(row);
+
+    &__list {
+    @include flexCenter(row);
+    gap: 2rem;
+
+    @media (width < 600px ){
+        @include flexCenter (column);
+    } 
+
+ }
+}
