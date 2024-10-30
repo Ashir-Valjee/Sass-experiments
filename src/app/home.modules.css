@@ -1,0 +1,39 @@
+body {
+  background-color: aquamarine;
+}
+body h1 {
+  color: rgb(104, 3, 3);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(237, 188, 226);
+}
+.main .main__paragraph1, .main .main__paragraph2 {
+  font-weight: 700;
+}
+.main .main__paragraph1:hover, .main .main__paragraph2:hover {
+  color: pink;
+}
+.main .main__paragraph2:hover {
+  color: black;
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+#bodyC {
+  min-height: 100vh;
+}/*# sourceMappingURL=home.modules.css.map */
