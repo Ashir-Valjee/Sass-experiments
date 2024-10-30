@@ -1,33 +1,40 @@
 // @use "_index"
 @import "./colours";
 @import "./mixin";
- 
-
 
 body {
-    background-color: $backGround;
-    font-family: $font;
-    font-size: $fontSize;
-    color: $textColor;
-    
-
+  background-color: $backGround;
+  font-family: $font;
+  font-size: $fontSize;
+  color: $textColor;
 }
 
-.menu-button{
-    position: fixed;
-    margin: 1rem;
-    
+.menu-button {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+  // margin: 1rem;
+  display: none;
+  @media (width <600px) {
+    display: block;
+  }
 }
 .main-nav {
-    @include flexCenter(row);
+  @include flexCenter(row);
+  @media (width <600px) {
+    height: 100vh;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    font-weight: weight(bold);
+  }
 
-    &__list {
+  &__list {
     @include flexCenter(row);
     gap: 2rem;
 
-    @media (width < 600px ){
-        @include flexCenter (column);
-    } 
-
- }
+    @media (width < 600px) {
+      @include flexCenter(column);
+    }
+  }
 }

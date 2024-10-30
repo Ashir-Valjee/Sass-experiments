@@ -1,10 +1,17 @@
 $primaryColor: rgb(141, 224, 214);
-$secondaryColour: grey;
+$secondaryColor: rgb(47, 0, 0);
 $backGround: black;
 $textColor: white;
-$fontWeight: 600;
-$font: 'Times New Roman', Times, serif;
+
+$font: "Times New Roman", Times, serif;
 $fontSize: 18px;
 
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
 
-
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
