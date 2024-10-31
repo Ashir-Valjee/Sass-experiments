@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function NewNavbar() {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   function handleShow() {
     setShowMenu(!showMenu);
@@ -19,32 +19,25 @@ export default function NewNavbar() {
         <Image src={Hamburger} alt="Hamburger" width={40} height={24}></Image>
       </button>
 
-      {showMenu ? (
-        <nav className="main-nav">
-          <ul className="main-nav__list">
-            <li className="main-nav__item">
-              {" "}
-              <Link href="/" className="main-nav__link">
-                {" "}
-                Home
-              </Link>{" "}
-            </li>
-            <li className="main-nav__item">
-              {" "}
-              <Link href="/" className="main-nav__link">
-                {" "}
-                About
-              </Link>{" "}
-            </li>
-            <li className="main-nav__item">
-              {" "}
-              <Link href="/" className="main-nav__link">
-                Shop
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      ) : null}
+      <nav className={`main-nav ${showMenu ? "show" : "hide"} `}>
+        <ul className="main-nav__list">
+          <li className="main-nav__item">
+            <Link href="/" className="main-nav__link">
+              Home
+            </Link>
+          </li>
+          <li className="main-nav__item">
+            <Link href="/" className="main-nav__link">
+              About
+            </Link>
+          </li>
+          <li className="main-nav__item">
+            <Link href="/" className="main-nav__link">
+              Shop
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
